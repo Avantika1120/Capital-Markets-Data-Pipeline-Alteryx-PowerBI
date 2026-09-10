@@ -171,14 +171,3 @@ Once opened and saved in Power BI Desktop, add the real `.pbix` and screenshots.
 | Transformation logic | Returns, moving averages, volatility, cumulative performance, drawdown |
 | Data quality | Null handling, type validation, uniqueness checks, required-field validation |
 | Python | Reproducible data acquisition and independent output validation |
-
-## Portfolio / interview story
-
-> I built a capital-markets data pipeline that combines historical security prices, benchmark data, and company metadata. I designed the transformation workflow in Alteryx using cleansing, joins, multi-row calculations, formulas, and summarization to create return, volatility, drawdown, and benchmark-relative metrics. I then modeled the output for Power BI so analysts could compare securities and sectors through an executive risk-and-performance dashboard.
-
-## Resume-safe wording
-
-**Capital Markets Data Pipeline | Alteryx, Power BI, Python**  
-Designed an Alteryx workflow to integrate multi-source equity, benchmark, and company-reference data; specified cleansing, joins, rolling return/volatility, drawdown, and sector aggregation logic, and built a Power BI-ready reporting layer with reproducible Python validation.
-
-After the `.yxmd` and `.pbix` are actually created and run in the desktop tools, the wording can be strengthened from **designed** to **built and executed**.
