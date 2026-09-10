@@ -1,0 +1,24 @@
+name: Capital Markets Pipeline CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Check Python syntax
+        run: python -m py_compile scripts/*.py tests/*.py
+      - name: Create deterministic fixture
+        run: python tests/create_ci_fixture.py
+      - name: Build analytical outputs
+        run: python scripts/build_analytics_output.py
+      - name: Validate analytical outputs
+        run: python scripts/validate_outputs.py
